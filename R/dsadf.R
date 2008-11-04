@@ -1,4 +1,4 @@
-`dsadf` <-
+dsadf <-
 function(fhandle,intervalnumber,...){
 # Average discretization of an inverse probability cdf
 #=========================================================================

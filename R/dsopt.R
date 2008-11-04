@@ -1,4 +1,4 @@
-`dsopt` <-
+dsopt <-
 function(fr,xlo,xhi,mass,...,samples=NULL){
 # Optimization routine for complex nonlinear functions using Matlabs Optimization Toolbox
 #=========================================================================   

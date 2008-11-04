@@ -1,4 +1,4 @@
-`dsqqplot` <-
+dsqqplot <-
 function(ds,sample,points=FALSE){
 # Plots quantile-quantile plots for a BPA ds and a set of points sample.
 #=========================================================================

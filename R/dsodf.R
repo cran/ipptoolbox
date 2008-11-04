@@ -1,4 +1,4 @@
-`dsodf` <-
+dsodf <-
 function(fhandle,intervalnumber,...){
 # Outer discretization of an inverse probability cdf
 #=========================================================================

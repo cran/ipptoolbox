@@ -1,4 +1,4 @@
-`dskstest` <-
+dskstest <-
 function(val,ds,...){
 # Expected value interval
 #=========================================================================   

@@ -1,4 +1,4 @@
-`dsexample` <-
+dsexample <-
 function(){
 # Example file calculating the reliability of a three-component series-parallel system
 #=========================================================================   

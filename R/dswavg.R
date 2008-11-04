@@ -1,4 +1,4 @@
-`dswavg` <-
+dswavg <-
 function(...,w=NULL){
 # Weighted average of BPAs "..." with optional weights w
 #=========================================================================

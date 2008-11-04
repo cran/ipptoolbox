@@ -19,10 +19,11 @@ dsksconf(x, conf = 0.95, lims = c(-Inf, Inf))
   \item{conf}{Confidence level of Kolmogorov-Smirnov fit in ]0,1[.}
 }
 \details{
-\item{dsecdffit}{Creates a BPA of the data set analoguous to probabilistic empirical CDF}
-\item{dslapconf}{Creates a BPA of the data set according to the Laplace method}
-\item{dsksconf}{Creates a BPA of the data set from the Kolmogorov-Smirnov bounds for a given confidence.}
-
+\itemize{
+\item \code{dsecdffit} creates a BPA of the data set analoguous to probabilistic empirical CDF
+\item \code{dslapconf} creates a BPA of the data set according to the Laplace method
+\item \code{dsksconf} creates a BPA of the data set from the Kolmogorov-Smirnov bounds for a given confidence.
+}
 The toolbox contains a set of functions to create empirical BPAs from data sets. These data sets may be either standard data values or intervals (e.g. caused by measurement imprecision). dsecdffit creates a BPA of the data set analogous to probabilistic empirical CDF. It is not conservative respective to distribution tails. dslapconf creates a BPA according to the Laplace method, dsksconf from the Kolmogorov-Smirnov bounds for a given confidence.
 
 The example illustrates the three different methods on interval and point data. First, 20 random values and intervals are generated. Then, dsecdffit, dslapconf and dsksconf are used to generate fits for both data sets.

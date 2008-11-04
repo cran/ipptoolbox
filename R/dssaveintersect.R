@@ -1,4 +1,4 @@
-`dssaveintersect` <-
+dssaveintersect <-
 function(...,method='averaging'){
 # Save intersection of BPAs "..." using method "averaging" or "envelope" in case of conflict.
 #=========================================================================

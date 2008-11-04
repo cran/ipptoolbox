@@ -19,10 +19,11 @@ dsred(y, thres = 0.001)
   \item{thres}{Minimal mass value of a focal element desired}
 }
 \details{
-  \item{dsstruct}{Creates a new BPA from a matrix and normalizes it.}
-  \item{dsnorm}{Normalizes a BPA (i. e. masses sum up to 1, no lower bound larger than higher bound).}
-  \item{dsred}{Reduces the number of focal elements in a BPA by merging adjoint elements.}
-
+\itemize{
+  \item \code{dsstruct} creates a new BPA from a matrix and normalizes it.
+  \item \code{dsnorm} normalizes a BPA (i. e. masses sum up to 1, no lower bound larger than higher bound).
+  \item \code{dsred} reduces the number of focal elements in a BPA by merging adjoint elements.
+}
 The IPP Toolbox represents BPAs in a discretized form. A BPA is stored as a matrix (3 columns) that lists the focal elements. The first and second columns contain lower and upper bounds, the third column the masses of the focal elements. The function dsstruct is a simple function to create a valid BPA. It takes a three-column matrix of the above type as an input. It performs some checks (upper bound >= lower bound, masses sum up to 1) and returns a valid BPA (possibly switching lower & upper bounds of focal elements, normalizing masses to 1) with the according warning messages.
 }
 \value{

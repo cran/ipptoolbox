@@ -1,4 +1,4 @@
-`dsconf` <-
+dsconf <-
 function(x,conf,confconf=NULL){
 # Quantile value of BPA x at level conf, optional with Wilk's bounds confconf
 #=========================================================================

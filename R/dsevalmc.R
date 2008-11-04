@@ -1,4 +1,4 @@
-`dsevalmc` <-
+dsevalmc <-
 function(fhandle,x, mcIT, optimizer=dsbound,corr=NULL,samples=NULL,fnoptions=NULL){
 # Propagates Dempster-Shafer structures through arbitrary functions y=f(x)
 #=========================================================================

@@ -1,4 +1,4 @@
-`dsksconf` <-
+dsksconf <-
 function(x,conf=0.95,lims=c(-Inf,Inf)){
 # Generates BPA from Kolmogorov-Smirnov bounds on data set x (points, intervals)
 #=========================================================================

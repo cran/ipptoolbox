@@ -21,10 +21,11 @@ dsmeanvar(intervalnumber, mean, var)
   \item{var}{Variance of the BPA}
 }
 \details{
-\item{dsminmeanmax}{generates a BPA from min, mean and max.}
-\item{dsminmodemax}{generates a BPA from min, mode and max.}
-\item{dsmeanvar}{generates a BPA from mean and variance.}
-
+\itemize{
+\item \code{dsminmeanmax} generates a BPA from min, mean and max.
+\item \code{dsminmodemax} generates a BPA from min, mode and max.
+\item \code{dsmeanvar} generates a BPA from mean and variance.
+}
 A set of functions to obtain a BPA that bounds all CDFs with given statistical properties (mean, variance...). These functions are especially useful for quantification of expert estimates. dsminmeanmax generates a BPA from min, mean and max, dsminmodemax from min, mode and max and dsmeanvar from mean and variance. It is necessary to provide an amount of focal elements to be generated (discretization accuracy).
 
 The example generates 3 BPAs. The first bounds all distributions with min=10, mode=60 and max=100. The second all with min=10, mean=30 and max=100. The third all with mean=30 and var=5.

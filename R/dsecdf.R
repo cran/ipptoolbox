@@ -1,4 +1,4 @@
-`dsecdf` <-
+dsecdf <-
 function(x){
 # Returns empirical CDF of a sample x or set of empirical CDFs of an interval sample x
 #=========================================================================   

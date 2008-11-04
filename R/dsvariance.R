@@ -1,4 +1,4 @@
-`dsvariance` <-
+dsvariance <-
 function(x){
 # Calculates variance of a BPA
 # This is an implementation of the fast bisection algorithms of Kreinovich et al.

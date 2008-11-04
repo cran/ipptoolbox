@@ -1,4 +1,4 @@
-`dsred` <-
+dsred <-
 function(y,thres=0.001){
 # Reduces the size of a Dempster-Shafer structure
 #=========================================================================   

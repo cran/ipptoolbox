@@ -1,4 +1,4 @@
-`dsaggwidth` <-
+dsaggwidth <-
 function(x){
 # Aggregated width of all focal elements of a BPA x (area between Bel(x) and Pl(x))
 #=========================================================================

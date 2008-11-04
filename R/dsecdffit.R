@@ -1,4 +1,4 @@
-`dsecdffit` <-
+dsecdffit <-
 function(x){
 # Generates BPA from empirical CDF bounds on data set x (points, intervals)
 #=========================================================================

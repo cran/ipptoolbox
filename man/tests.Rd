@@ -1,4 +1,4 @@
-\name{bpafromdist}
+\name{tests}
 \alias{dskstest}
 \alias{dsbelpltests}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -16,8 +16,9 @@ dskstest(val, ds, ...)
   \item{\dots}{Optional pbox parameters (points, BPAs)}
 }
 \details{
-\item{dskstest}{Evaluates the fit of a pbox using a Kolmogorov-Smirnov test}
-
+\itemize{
+\item \code{dskstest} evaluates the fit of a pbox using a Kolmogorov-Smirnov test
+}
 The method dskstest evaluates the fit of a pbox using a Kolmogorov-Smirnov test. The function works both on point values and interval data. The syntax is close to the R syntax for a probabilistic K-S test ks.test(). Both a BPA and a parametric pbox (in form of a CDF and a set of precise/imprecise parameters) can be tested.
 
 The example generates a random set of points and a random set of intervals from a normal distribution (mean=0.3, sd=1.2). It tests, if a pbox with mean=[-0.5,0.5] and sd=1 fits the point data. In a second example, the user passes a normal CDF with parameters mean=0 and sd=[1,2] to the test. dskstest checks, if it fits the interval data.

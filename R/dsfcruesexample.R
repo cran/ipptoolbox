@@ -1,4 +1,4 @@
-`dsfcruesexample` <-
+dsfcruesexample <-
 function(){
 #Load necessary packages (please install if missing)
 library(evd)

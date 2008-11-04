@@ -1,4 +1,4 @@
-`dslapconf` <-
+dslapconf <-
 function(x,lims=c(-Inf,Inf)){
 # Generates BPA from Kolmogorov-Smirnov bounds on data set x (points, intervals)
 #=========================================================================
