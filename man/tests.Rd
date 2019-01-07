@@ -16,8 +16,8 @@ dskstest(val, ds, ...)
   \item{\dots}{Optional pbox parameters (points, BPAs)}
 }
 \details{
-\itemize{
-\item \code{dskstest} evaluates the fit of a pbox using a Kolmogorov-Smirnov test
+\describe{
+\item{dskstest}{Evaluates the fit of a pbox using a Kolmogorov-Smirnov test}
 }
 The method dskstest evaluates the fit of a pbox using a Kolmogorov-Smirnov test. The function works both on point values and interval data. The syntax is close to the R syntax for a probabilistic K-S test ks.test(). Both a BPA and a parametric pbox (in form of a CDF and a set of precise/imprecise parameters) can be tested.
 

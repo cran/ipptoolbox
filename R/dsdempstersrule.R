@@ -1,4 +1,5 @@
-dsdempstersrule <-
+#' @export
+`dsdempstersrule` <-
 function(...,maxfocals=10000000){
 # Dempster's rule of BPAs "..."
 #=========================================================================

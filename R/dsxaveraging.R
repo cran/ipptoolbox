@@ -1,4 +1,5 @@
-dsxaveraging <-
+#' @export
+`dsxaveraging` <-
 function(...,w=NULL,maxfocals=10000000){
 # XEnveloping of BPAs "..."
 #=========================================================================

@@ -1,4 +1,6 @@
-dsodf <-
+#' @import AlgDesign
+#' @export
+`dsodf` <-
 function(fhandle,intervalnumber,...){
 # Outer discretization of an inverse probability cdf
 #=========================================================================
@@ -8,7 +10,7 @@ function(fhandle,intervalnumber,...){
 # Copyright (c) Philipp Limbourg, University of Duisburg-Essen
 # www.uni-duisburg-essen.de/informationslogistik/
 #=========================================================================
-require(AlgDesign)
+#require(AlgDesign)
 autoload("factorial","AlgDesign");
 mythres=(1-1E-15)/floor(intervalnumber);
 count=1;

@@ -12,14 +12,14 @@ dsfcruesexample()
 dsexample()
 }
 %- maybe also 'usage' for other objects documented here.
-\arguments{
-}
 \details{
 Please see the code of the examples.
 }
-\value{
+\references{
+Philipp Limbourg, Etienne de Rocquigny (2010). Uncertainty analysis using evidence theory - confronting level-1 and level-2 approaches with data availability and computational constraints. Rel. Eng. & Sys. Safety 95(5): 550-564
+
+Philipp Limbourg, Robert Savic et al. (2007). Fault Tree Analysis in an Early Design Stage using the Dempster-Shafer Theory of Evidence. European Conference on Safety and Reliability - ESREL 2007, Stavanger, Norway, Taylor and Francis.
 }
-\references{Limbourg, P., R. Savic, et al. (2007). Fault Tree Analysis in an Early Design Stage using the Dempster-Shafer Theory of Evidence. European Conference on Safety and Reliability - ESREL 2007, Stavanger, Norway, Taylor and Francis.}
 \author{Philipp Limbourg <p.limbourg@uni-due.de>}
 \examples{
 print("Example Fcrues")

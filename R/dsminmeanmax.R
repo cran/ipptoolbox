@@ -1,4 +1,5 @@
-dsminmeanmax <-
+#' @export
+`dsminmeanmax` <-
 function(intervalnumber,min,mean,max){
 # Generates a BPA enclosing all CDFs with given min, mean and max
 #=========================================================================

@@ -1,4 +1,5 @@
-dswmix <-
+#' @export
+`dswmix` <-
 function(...,w=NULL) {
 # Weighted mixture of BPAs "..." with optional weights w
 #=========================================================================

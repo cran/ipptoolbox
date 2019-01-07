@@ -1,4 +1,5 @@
-dssensitivity <-
+#' @export
+`dssensitivity` <-
 function(x, parnums, fhandle, uncfn, mcIT, pinch_samples, pinch_type=NULL,optimizer=dsmonotonous,fnoptions=NULL){
 # Sensitivity measure routine based on Monte-Carlo sampling.
 #=========================================================================   
@@ -49,7 +50,7 @@ function(x, parnums, fhandle, uncfn, mcIT, pinch_samples, pinch_type=NULL,optimi
 # Reference : Limbourg P, Savic R, Petersen J, Kochs H-D: Fault Tree
 # Analysis in an Early Design Stage using the Dempster-Shafer Theory of
 # Evidence. In: Terje Aven JEV (ed) European Conference on Safety and
-# Reliability – ESREL 2007, pp. 713-722. Taylor and Francis, Stavanger, Norway (2007).
+# Reliability ? ESREL 2007, pp. 713-722. Taylor and Francis, Stavanger, Norway (2007).
 # Link      :
 # http://iit.uni-duisburg.de/forschung/veroeffentlichungsdateien/2007/LSKP07.pdf
 # Copyright (c) Philipp Limbourg, University of Duisburg-Essen

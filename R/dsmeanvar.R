@@ -1,4 +1,5 @@
-dsmeanvar <-
+#' @export
+`dsmeanvar` <-
 function(intervalnumber, mean, var){
 # Generates a BPA enclosing all CDFs with given mean and variance
 #=========================================================================

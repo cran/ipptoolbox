@@ -1,4 +1,6 @@
-dsksconf <-
+#' @import kolmim
+#' @export
+`dsksconf` <-
 function(x,conf=0.95,lims=c(-Inf,Inf)){
 # Generates BPA from Kolmogorov-Smirnov bounds on data set x (points, intervals)
 #=========================================================================
@@ -9,11 +11,15 @@ function(x,conf=0.95,lims=c(-Inf,Inf)){
 # Function to determine KS alpha from confidence level
 getalpha2=function(n,alpha){
 if(n<200){
-f=function(ks,n,conf){.C("pkolmogorov2x", p = as.double(ks), as.integer(n), PACKAGE = "stats")$p-conf}
+  #f=function(ks,n,conf){.C("pkolmogorov2x", p = as.double(ks), as.integer(n), PACKAGE = "stats")$p-conf}
+#  f=function(ks,n,conf){.Call(stats:::C_pKolmogorov2x, p = as.double(ks), as.integer(n))-conf}
+  f=function(ks,n,conf){kolmim::pkolm(ks, n)-conf}
 } else {
-f=function(ks,n,conf){pkstwo(sqrt(n)*ks)-conf}
+#f=function(ks,n,conf){pkstwo(sqrt(n)*ks)-conf}
+  #f=function(ks,n,conf){.Call(stats:::C_pKolmogorov2x, p = as.double(ks), as.integer(n))-conf}
+  f=function(ks,n,conf){kolmim::pkolm(ks, n)-conf}
 }
-alpha=uniroot(f,c(0,1),n,alpha)$root
+alpha=uniroot(f,c(0.00000000001,1),n,alpha)$root
 
 print(alpha)
 alpha
@@ -64,19 +70,19 @@ alpha=amat[tabind,confind+1]
 alpha
 }
 
-pkstwo <- function(x, tol = 1e-06) {
-        if (is.numeric(x)) 
-            x <- as.vector(x)
-        else stop("argument 'x' must be numeric")
-        p <- rep(0, length(x))
-        p[is.na(x)] <- NA
-        IND <- which(!is.na(x) & (x > 0))
-        if (length(IND) > 0) {
-            p[IND] <- .C("pkstwo", as.integer(length(x[IND])), 
-                p = as.double(x[IND]), as.double(tol), PACKAGE = "stats")$p
-        }
-        return(p)
-    }
+#pkstwo <- function(x, tol = 1e-06) {
+#        if (is.numeric(x)) 
+#            x <- as.vector(x)
+#        else stop("argument 'x' must be numeric")
+#        p <- rep(0, length(x))
+#        p[is.na(x)] <- NA
+#        IND <- which(!is.na(x) & (x > 0))
+#        if (length(IND) > 0) {
+#            p[IND] <- .C("pkstwo", as.integer(length(x[IND])), 
+#                p = as.double(x[IND]), as.double(tol), PACKAGE = "stats")$p
+#        }
+#        return(p)
+#    }
 
 
 # Function that converts the KS bounds for the data to a BPA

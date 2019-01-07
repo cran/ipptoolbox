@@ -14,8 +14,8 @@ This package was developed in the context of a collaborative research project be
 \tabular{ll}{
 Package: \tab ipptoolbox\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2008-11-04\cr
+Version: \tab 1.2\cr
+Date: \tab 2019-01-02\cr
 License: \tab GPL version 2 or newer\cr
 LazyLoad: \tab yes\cr
 }

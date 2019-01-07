@@ -27,11 +27,11 @@ dspl(x)
   \item{points}{Optional, points=TRUE: plot the sample values as points + line, otherwise only a straight line.}
 }
 \details{
-\itemize{
-\item \code{dscdf} plots Bel([-Inf,x]) and Pl([-Inf,x]). These functions bound all CDFs.
-\item \code{dsqqplot} plots a quantile-quantile plot between data and a BPA.
-\item \code{dsbel} returns Bel([-Inf,x]), e. g. for own plotting routines.
-\item \code{dspl} returns Pl([-Inf,x]), e. g. for own plotting routines.
+\describe{
+\item{dscdf}{Plots Bel([-Inf,x]) and Pl([-Inf,x]). These functions bound all CDFs.}
+\item{dsqqplot}{Plots a quantile-quantile plot between data and a BPA.}
+\item{dsbel}{Returns Bel([-Inf,x]), e. g. for own plotting routines.}
+\item{dspl}{Returns Pl([-Inf,x]), e. g. for own plotting routines.}
 }
 The function dscdf plots Bel([-Inf,x]) and Pl([-Inf,x]), the bounds on all CDFs. Arbitrary graphics parameters can be passed to dscdf. dsqqplot plots a quantile-quantile plot between data and a BPA. dsbel and dspl return the function Bel([-Inf,x])/ Pl([-Inf,x]) as a set of (x,y)-type points, e. g. for own plotting routines.
 

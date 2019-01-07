@@ -1,4 +1,5 @@
-dsbound <-
+#' @export
+`dsbound` <-
 function(fhandle,xlo,xhi,mass,...,samples=NULL){
 # Evaluates f(min(a,b)) and f(max(a,b)) boundary function values.
 #=========================================================================   

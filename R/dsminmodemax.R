@@ -1,4 +1,5 @@
-dsminmodemax <-
+#' @export
+`dsminmodemax` <-
 function(intervalnumber,min,mode,max){
 # Generates a BPA enclosing all CDFs with given min, mode and max
 #=========================================================================

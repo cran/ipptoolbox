@@ -1,4 +1,5 @@
-dssummary <-
+#' @export
+`dssummary` <-
 function(x){
 # Summary stats of a BPA
 #=========================================================================

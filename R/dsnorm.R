@@ -1,4 +1,5 @@
-dsnorm <-
+#' @export
+`dsnorm` <-
 function(y){
 # Normalizes a Dempster-Shafer structure
 #=========================================================================   

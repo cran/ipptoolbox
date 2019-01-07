@@ -1,5 +1,5 @@
-dsexample <-
-function(){
+#' @export
+`dsexample` <- function(){
 # Example file calculating the reliability of a three-component series-parallel system
 #=========================================================================   
 # y=dsexample
@@ -53,11 +53,11 @@ print('3. Now we propagate the uncertain variables through our system function')
 print('3. The propagation using independence assumption');
 y=dsevalmc(myfn,list(component1,component2,component3),10000,optimizer=dsbound)[[1]];
 
-#'Setting up the correlation matrix. Component 2 and 3 have a positive correlation';
+#Setting up the correlation matrix. Component 2 and 3 have a positive correlation;
 
 corr=c(0,0,0.5);
 
-#'Now start the propagation. The optimizer should be dsbound as the function is monotonously increasing. 1000 iterations, time to get a coffee (-;';
+#Now start the propagation. The optimizer should be dsbound as the function is monotonously increasing. 1000 iterations, time to get a coffee (-;
 
 ycorr=dsevalmc(myfn,list(component1,component2,component3),10000,optimizer=dsbound,corr)[[1]];
 
@@ -78,4 +78,3 @@ a=dssensitivity(list(component1,component2,component3),c(1,2,3),myfn,dsaggwidth,
 print("s1,s2,s3:")
 print(a)
 }
-

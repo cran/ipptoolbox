@@ -1,4 +1,6 @@
-dskstest <-
+#' @import kolmim
+#' @export
+`dskstest` <-
 function(val,ds,...){
 # Expected value interval
 #=========================================================================   
@@ -21,19 +23,20 @@ function(val,ds,...){
 # www.uni-duisburg-essen.de/informationslogistik/
 #=========================================================================
 
-   pkstwo <- function(x, tol = 1e-06) {
-        if (is.numeric(x)) 
-            x <- as.vector(x)
-        else stop("argument 'x' must be numeric")
-        p <- rep(0, length(x))
-        p[is.na(x)] <- NA
-        IND <- which(!is.na(x) & (x > 0))
-        if (length(IND) > 0) {
-            p[IND] <- .C("pkstwo", as.integer(length(x[IND])), 
-                p = as.double(x[IND]), as.double(tol), PACKAGE = "stats")$p
-        }
-        return(p)
-    }
+#   pkstwo <- function(x, tol = 1e-06) {
+#        if (is.numeric(x)) 
+#            x <- as.vector(x)
+#        else stop("argument 'x' must be numeric")
+#        p <- rep(0, length(x))
+#        p[is.na(x)] <- NA
+#        IND <- which(!is.na(x) & (x > 0))
+#        if (length(IND) > 0) {
+#          p[IND] <- .Call(C_pKS2, p = x[IND], tol)
+##            p[IND] <- .C(stats:::C_pKS2, as.integer(length(x[IND])), 
+# #               p = as.double(x[IND]), as.double(tol), PACKAGE = "stats")$p
+#        }
+#        return(p)
+#    }
 
 if (is.matrix(val)==FALSE){
 val=matrix(val);
@@ -84,9 +87,13 @@ kss=pmax(kss[,1],kss[,2]);
 ks=max(kss)
 
 if(is.numeric(ds)){
-         PVAL <- 1 - pkstwo(sqrt(n * dim(ds)[1]/(n + dim(ds)[1])) * ks)
+  PVAL <- 1 - pkolmim(ks, n)
+  #PVAL <- 1 - .Call(kolmim:::K_pkolmim2x, ks, n)
+         #PVAL <- 1 - pkstwo(sqrt(n * dim(ds)[1]/(n + dim(ds)[1])) * ks)
 } else {
-PVAL <- 1 - pkstwo(sqrt(n) * ks)
+  PVAL <- 1 - pkolmim(ks, n)
+  #PVAL <- 1 - .Call(kolmim:::K_pkolmim2x, ks, n)
+#PVAL <- 1 - pkstwo(sqrt(n) * ks)
 }
 PVAL
 }

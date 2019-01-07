@@ -1,4 +1,5 @@
-dsbelpltests <-
+#' @export
+`dsbelpltests` <-
 function(x,a){
 # Belief and Plausibility of a set of points a respective to a BPA x.
 #=========================================================================

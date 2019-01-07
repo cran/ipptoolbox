@@ -1,4 +1,5 @@
-dsexpect <-
+#' @export
+`dsexpect` <-
 function(x){
 # Expected value interval
 #=========================================================================

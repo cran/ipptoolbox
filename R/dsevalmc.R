@@ -1,4 +1,6 @@
-dsevalmc <-
+#' @import copula AlgDesign
+#' @export
+`dsevalmc` <-
 function(fhandle,x, mcIT, optimizer=dsbound,corr=NULL,samples=NULL,fnoptions=NULL){
 # Propagates Dempster-Shafer structures through arbitrary functions y=f(x)
 #=========================================================================
@@ -34,8 +36,8 @@ function(fhandle,x, mcIT, optimizer=dsbound,corr=NULL,samples=NULL,fnoptions=NUL
 # Copyright (c) Philipp Limbourg, University of Duisburg-Essen
 # www.uni-duisburg-essen.de/informationslogistik/
 #=========================================================================
-require(copula);
-require(AlgDesign);
+#require(copula);
+#require(AlgDesign);
 if (is.list(x[[1]])){
     mult<-length(x);}
 else{
@@ -92,7 +94,7 @@ else
     randnos=matrix(0,mcIT,max(len));
     stepsize=min(mcIT, 10000);
     for (i in seq(1,mcIT,stepsize))
-            randnos[i:min(mcIT, i+stepsize-1),]=rcopula(cop,stepsize);
+            randnos[i:min(mcIT, i+stepsize-1),]=rCopula(stepsize,cop);
 }
 }
 y=list();

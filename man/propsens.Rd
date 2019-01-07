@@ -12,8 +12,11 @@
 Routines for propagating BPAs and sensitivity analysis.
 }
 \usage{
-dsevalmc(fhandle, x, mcIT, optimizer = dsbound, corr = NULL, samples = NULL, fnoptions = NULL)
-dssensitivity(x, parnums, fhandle, uncfn, mcIT, pinch_samples, pinch_type = NULL, optimizer = dsmonotonous, fnoptions = NULL)
+dsevalmc(fhandle, x, mcIT, optimizer = dsbound, corr = NULL,
+samples = NULL, fnoptions = NULL)
+
+dssensitivity(x, parnums, fhandle, uncfn, mcIT, pinch_samples, 
+pinch_type = NULL,optimizer = dsmonotonous, fnoptions = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -32,11 +35,11 @@ dssensitivity(x, parnums, fhandle, uncfn, mcIT, pinch_samples, pinch_type = NULL
 }
 \details{
 The Monte Carlo propagation engine is the core of the toolbox. It allows propagating BPAs through arbitrary functions. The user can define the amount of Monte Carlo samples and the optimization method. Currently, four methods are implemented (dsbound, dsmonotonous, dsmonotonous2, dsopt).
-\itemize{
-\item \code{dsmonotonous} Recommended for monotonous functions (increasing/decreasing/mixed).
-\item \code{dsmonotonous2} Evaluates all corners of the focal element and is recommended, if the function is not monotonous but quite regular.
-\item \code{dsopt} Local optimizer for nonmonotonous functions.
-\item \code{dsbound} Applicable in the special case that the function is monotonously increasing.
+\describe{
+\item{dsmonotonous}{Recommended for monotonous functions (increasing/decreasing/mixed).}
+\item{dsmonotonous2}{Evaluates all corners of the focal element and is recommended, if the function is not monotonous but quite regular.}
+\item{dsopt}{Local optimizer for nonmonotonous functions.}
+\item{dsbound}{Applicable in the special case that the function is monotonously increasing.}
 }
 Dependency between focal elements is modelled by a Gaussian copula as proposed in (Ferson, Hajagos et al. 2004). The copula parameters for n inputs need to be given as a vector of size n*(n-1)/2 with the first component c1 in [0,1] representing the dependency between input 1&2, c2 between 1&3, ..., cn-1 between 1&n, cn between 2&3 and so on. This format is analogous to the format used in the R package "copula". The function returns a data structure with a result BPA and all function evaluations.
 The method dssensitivity allows sensitivity analysis for a custom uncertainty measure. The function receives a list of BPAs x and a vector parnums giving all indices for which the sensitivity shall be computed. fhandle is the system function, uncfn the uncertainty measure. An arbitrary uncertainty measure can be used as long as it returns a single value for a BPA. A useful choice is "dsaggwidth", the aggregated width measure. The input BPAs are "pinch sample" times reduced to a structure with less uncertainty defined by "pinchtype" (either a point, a distribution or an interval). Each time, the BPA is propagated using mcIT Monte Carlo samples. The function returns a set of sensitivity indices.

@@ -1,10 +1,11 @@
-dsvariance <-
+#' @export
+`dsvariance` <-
 function(x){
 # Calculates variance of a BPA
 # This is an implementation of the fast bisection algorithms of Kreinovich et al.
 # The algorithm is described in detail in the following paper:
 # Kreinovich, V., G. Xiang, et al. (2006).
-# "Computing mean and variance under Dempster–Shafer uncertainty:
+# "Computing mean and variance under Dempster?Shafer uncertainty:
 # Towards faster algorithms."
 # International Journal of Approximate Reasoning 42(3): 212-227.
 #=========================================================================   

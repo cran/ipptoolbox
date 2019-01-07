@@ -1,4 +1,5 @@
-dsstruct <-
+#' @export
+`dsstruct` <-
 function(x){
 # geometric mean calculation
 # Returns a new Dempster-Shafer structure

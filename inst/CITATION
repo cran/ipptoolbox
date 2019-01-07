@@ -1,0 +1,17 @@
+citHeader("This package was developed in the context of a collaborative research project between EDF Research and Development and the University of Duisburg-Essen. To cite the IPPToolbox package in publications please use:")
+
+
+citEntry(entry="Article",
+         title = "Uncertainty analysis using evidence theory - confronting level-1 and level-2 approaches with data availability and computational constraints",
+         author = "Philipp Limbourg and Etienne de Rocquigny",
+         journal = "Rel. Eng. & Sys. Safety",
+         year = 2010,
+         volume = 95,
+         number = 5,
+         pages = "550-564",        textVersion =
+         paste("Philipp Limbourg, Etienne de Rocquigny (2010). Uncertainty analysis using evidence theory - confronting level-1 and level-2 approaches with data availability and computational constraints. Rel. Eng. & Sys. Safety 95(5): 550-564"
+))
+
+citFooter("Thank you very much. Have a lovely day.")
+
+

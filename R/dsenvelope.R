@@ -1,4 +1,5 @@
-dsenvelope <-
+#' @export
+`dsenvelope` <-
 function(...){
 # Enveloping of BPAs "..."
 #=========================================================================

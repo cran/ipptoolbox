@@ -1,4 +1,5 @@
-dsintersect <-
+#' @export
+`dsintersect` <-
 function(...){
 # Intersection of BPAs "..."
 #=========================================================================

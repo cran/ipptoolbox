@@ -1,8 +1,10 @@
-dsfcruesexample <-
+#' @import evd triangle
+#' @export
+`dsfcruesexample` <-
 function(){
 #Load necessary packages (please install if missing)
-library(evd)
-library(triangle)
+#library(evd)
+#library(triangle)
 
 #Data on Q:
 Qdonnes=c(3854, 1256, 1649, 1605, 341, 1149, 868, 1148, 1227, 1991, 1255,

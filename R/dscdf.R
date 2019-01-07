@@ -1,4 +1,7 @@
-dscdf <-
+#' @importFrom grDevices dev.new
+#' @importFrom graphics barplot legend lines title
+#' @export
+`dscdf` <-
 function(x,xrange=NULL,col=c(3,4),...,newplot=TRUE){
 # Plots Bel(-inf,x) and Pl(-inf,x), the analogon to a cdf of x.
 #=========================================================================   

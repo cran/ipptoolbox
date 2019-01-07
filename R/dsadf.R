@@ -1,4 +1,9 @@
-dsadf <-
+#' @import AlgDesign
+#' @importFrom grDevices dev.new
+#' @importFrom graphics barplot legend lines title
+#' @importFrom stats constrOptim dbinom optim runif uniroot
+#' @export
+`dsadf` <-
 function(fhandle,intervalnumber,...){
 # Average discretization of an inverse probability cdf
 #=========================================================================
@@ -8,8 +13,8 @@ function(fhandle,intervalnumber,...){
 # Copyright (c) Philipp Limbourg, University of Duisburg-Essen
 # www.uni-duisburg-essen.de/informationslogistik/
 #=========================================================================
-require(AlgDesign)
-autoload("factorial","AlgDesign");
+#require(AlgDesign)
+#autoload("factorial","AlgDesign");
 mythres=(1-1E-15)/floor(intervalnumber);
 count=1;
 params=list(...)

@@ -1,4 +1,5 @@
-dsbelpl <-
+#' @export
+`dsbelpl` <-
 function(x,a){
 # Belief and Plausibility of an interval
 #=========================================================================   

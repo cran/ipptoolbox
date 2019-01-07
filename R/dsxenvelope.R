@@ -1,4 +1,5 @@
-dsxenvelope <-
+#' @export
+`dsxenvelope` <-
 function(...,maxfocals=10000000){
 # XEnveloping of BPAs "..." with optional weights w
 #=========================================================================
